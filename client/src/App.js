@@ -13,7 +13,11 @@ function App() {
     setMessage('');
 
     try {
-      const response = await fetch('http://localhost:5000/api/chat', {
+      const backendUrl = process.env.NODE_ENV === 'production'
+        ? process.env.REACT_APP_BACKEND_URL
+        : 'http://localhost:5000';
+
+      const response = await fetch(`${backendUrl}/api/chat`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

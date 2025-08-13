@@ -1,0 +1,14 @@
+{
+  "name": "gemini-ai-tool",
+  "version": "1.0.0",
+  "description": "AI-powered tool for faculty to interact with an AI agent on teaching with AI.",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "build": "cd client && npm install && npm run build",
+    "install-all": "npm install && cd client && npm install && cd ../server && npm install"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
