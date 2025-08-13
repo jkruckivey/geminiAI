@@ -3,8 +3,8 @@ services:
   - type: web
     name: gemini-ai-backend
     env: node
-    buildCommand: npm install # This will run the root package.json install
-    startCommand: npm start # This will run the root package.json start
+    buildCommand: npm run install-all # Use the custom script to install all dependencies
+    startCommand: npm start
     rootDir: ./
     envVars:
       - key: GEMINI_API_KEY
