@@ -8,12 +8,6 @@ services:
     rootDir: ./
     envVars:
       - key: GEMINI_API_KEY
-        sync: false # Set this to true if you want to sync with your Render dashboard, but for sensitive keys, false is better.
+        sync: false
       - key: NODE_ENV
         value: production
-  - type: static
-    name: gemini-ai-frontend
-    env: static
-    buildCommand: cd client && npm install && npm run build
-    publishPath: client/build
-    rootDir: ./
